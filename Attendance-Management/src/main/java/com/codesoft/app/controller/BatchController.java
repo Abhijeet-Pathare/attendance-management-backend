@@ -28,4 +28,9 @@ public class BatchController {
     public Batch updateBatch(@PathVariable Long id, @RequestBody Batch batch) {
         return batchService.update(id, batch);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteBatchById(@PathVariable Long id){
+         batchService.deleteById(id);
+    }
 }

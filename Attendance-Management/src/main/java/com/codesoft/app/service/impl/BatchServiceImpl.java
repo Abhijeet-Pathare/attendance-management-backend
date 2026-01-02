@@ -65,4 +65,11 @@ public class BatchServiceImpl implements BatchService {
         batch.setStatus("INACTIVE");
         batchRepository.save(batch);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        Optional<Batch> existing = batchRepository.findById(id);
+        Batch b = existing.get();
+        batchRepository.deleteById(b.getId());
+    }
 }

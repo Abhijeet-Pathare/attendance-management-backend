@@ -18,4 +18,6 @@ public interface BatchService {
     // search by subject, teacherName, daysOfWeek
 
     void deactivate(Long id);
+
+    void deleteById(Long id);
 }
